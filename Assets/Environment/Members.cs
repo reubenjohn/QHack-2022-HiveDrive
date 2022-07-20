@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Members : MonoBehaviour
 {
-    [SerializeField] Text population;
+    [SerializeField] Text population = null;
 
     void Update() => population.text = transform.childCount.ToString();
 }

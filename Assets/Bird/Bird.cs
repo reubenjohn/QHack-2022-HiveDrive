@@ -10,8 +10,8 @@ public class Bird : MonoBehaviour
     [SerializeField] private float healthSpeed = 1e-8f;
     [SerializeField] private float explosionRadius = 1f;
     [SerializeField] private float explosionPower = 10f;
-    [SerializeField] private Transform front;
-    [SerializeField] private Transform spawnPoint;
+    public Transform front;
+    public Transform spawnPoint;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
