@@ -104,8 +104,9 @@ GameObject:
   - component: {fileID: 9049782317669792058}
   - component: {fileID: 9049782317669792061}
   - component: {fileID: 8572144990455961229}
+  - component: {fileID: -7250819474146468814}
   m_Layer: 0
-  m_Name: Driver
+  m_Name: EmergencyVehicle
   m_TagString: Bird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +169,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 44d13d70ee0f58445bdfffbefa5edcdb, type: 3}
-  m_Color: {r: 0.34509802, g: 0.5288467, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.2028302, b: 0.27666435, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -218,12 +219,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4097abe68a7a4efd8cf62a1b635878b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alignmentCoefficient: 0.1
-  healthSpeed: 0.00000001
-  explosionRadius: 1
-  explosionPower: 10
-  front: {fileID: 5208772532185473868}
-  spawnPoint: {fileID: 969089390579382689}
   lane: 0
-  angle: 0
+  targetLane: 0
+  angularPosition: 0
   speed: 0.1
+  range: 2
+--- !u!114 &-7250819474146468814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9049782317669792063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6629f2abfa480ed46a0a40058bdeda05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

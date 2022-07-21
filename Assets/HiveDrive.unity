@@ -1782,4 +1782,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   driver: {fileID: 9049782317669792063, guid: 88a8a5fff27047f68a720728c42f7379, type: 3}
+  emergencyVehicle: {fileID: 9049782317669792063, guid: f24687ffe6fdbcc44a7bb39aff114dca,
+    type: 3}
   targetPopulation: 10
