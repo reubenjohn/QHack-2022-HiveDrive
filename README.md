@@ -7,4 +7,6 @@ A Unity simulation demonstrating the use of virtual 5G base stations and vehicle
 1. Clone the repository (either through command line or with GitHub Desktop https://desktop.github.com/).
 1. Open the project in Unity.
    <img width="950" alt="screen shot 2018-05-18 at 9 39 13 am" src="https://user-images.githubusercontent.com/1314285/40246918-6d8c9156-5a7f-11e8-8087-6ffad9194969.png">  1. Open the "HiveDrive" scene from the project pane
+   ![image](https://user-images.githubusercontent.com/4802052/180148697-b60bb7c8-0ee6-4cd9-b5b1-036e265d0104.png)
 1. Click the play button
+
