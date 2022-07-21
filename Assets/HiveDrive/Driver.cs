@@ -5,16 +5,9 @@ namespace HiveDrive
 {
     public class Driver : MonoBehaviour
     {
-        public static readonly float MinRadius = 3f;
-        public static readonly float LaneWidth = .25f;
+        public const float MinRadius = 3f;
+        public const float LaneWidth = .25f;
 
-        [SerializeField] private float alignmentCoefficient = .1f;
-        [SerializeField] private float healthSpeed = 1e-8f;
-        [SerializeField] private float explosionRadius = 1f;
-        [SerializeField] private float explosionPower = 10f;
-        public Transform front;
-        public Transform spawnPoint;
-        
         public float lane = 0;
         public float angle = 0;
         public float speed = .1f;
@@ -41,24 +34,5 @@ namespace HiveDrive
                                  (Vector2.up * Radius);
             // spriteRenderer.color = Color.Lerp(Color.red, Color.blue, .5f + health * 500f);
         }
-
-        private void OnCollisionStay2D(Collision2D other) => LerpHealth(-10);
-
-        private void OnTriggerStay2D(Collider2D other) // obstacle in range
-        {
-            AvoidCollision(other);
-            if (other.TryGetComponent(out Driver bird))
-                TryAlignWithDriver(bird);
-        }
-
-        private void AvoidCollision(Collider2D other)
-        {
-            Vector2 vectorToTarget = other.ClosestPoint(front.position) - (Vector2)front.position;
-        }
-
-        private void TryAlignWithDriver(Driver bird) =>
-            transform.rotation = Quaternion.Slerp(transform.rotation, bird.transform.rotation, alignmentCoefficient);
-
-        private void LerpHealth(float target) => health = Lerp(health, target, healthSpeed);
     }
 }
